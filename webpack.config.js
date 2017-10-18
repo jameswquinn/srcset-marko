@@ -1,6 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var PurifyCSSPlugin = require('purifycss-webpack');
+var purify = require("purifycss-webpack-plugin");
 var path = require("path");
 var glob = require('glob');
 
@@ -11,10 +11,19 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: 'app.bundle.js'
     },
+    resolve: {
+        extensions: ['.js', '.marko']
+    },
     module: {
         rules: [{
             test: /\.marko$/,
             loader: 'marko-loader'
+        }, {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract({
+                fallback: "style-loader",
+                use: "css-loader!sass-loader"
+            })
         }, {
             test: /\.(jpe?g|png|gif|svg)$/,
             use: [{
@@ -60,6 +69,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Project Demo',
+            // minify: { collapseWhitespace: true },
             inject: 'body',
             hash: true,
             template: './src/index.html', // Load a custom template (ejs by default see the FAQ for details)
@@ -69,9 +79,11 @@ module.exports = {
             disable: false,
             allChunks: true
         }),
-        new PurifyCSSPlugin({
-            // Give paths to parse for rules. These should be absolute!
-            paths: glob.sync(path.join(__dirname, 'src/*.html')),
+        new purify({
+            basePath: __dirname,
+            paths: [
+                "./src/intro.marko",
+            ]
         })
     ]
 }

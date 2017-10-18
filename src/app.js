@@ -1,3 +1,5 @@
+const css = require('./Furtive/all.scss');
+
 function getImage(image) {return require('./uploads/' + image)};
 
 // loaded via srcset loader as specified in the webpack config
@@ -15,7 +17,7 @@ function getImage(image) {return require('./uploads/' + image)};
 */
 
 
-var view = require('./template.marko'); // Import `./view.marko`
+var view = require('./intro.marko'); // Import `./view.marko`
 var result = view.renderSync({});
 
 result.appendTo(document.body);
