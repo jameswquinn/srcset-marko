@@ -6,6 +6,7 @@ class {
         this.state.count++;
     }
 }
+
 style {
     .count {
         color:#09c;
@@ -16,8 +17,16 @@ style {
         padding:0.5em;
     }
 }
-<div.count>${state.count}</div>
-<button.example-button on-click('increment')>Click me!</button>
+
+<div.count>
+    ${state.count}
+</div>
+<button.example-button on-click('increment')>
+    Click me!
+</button>
+
+
+
 <section class="measure p2" id="utilities">
     <h3>Utilities</h3>
     <h4 class="muted">Padding</h4>

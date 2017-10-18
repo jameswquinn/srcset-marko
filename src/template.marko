@@ -1,4 +1,13 @@
-
+import logo from './uploads/logo.jpeg'
+import villianess2 from './uploads/villianess2.jpeg'
+import villianess3 from './uploads/villianess3.jpeg'
+import villianess4 from './uploads/villianess4.jpeg'
+import villianess5 from './uploads/villianess5.jpeg'
+import villianess6 from './uploads/villianess6.jpeg'
+import villianess7 from './uploads/villianess7.jpeg'
+import villianess8 from './uploads/villianess8.jpeg'
+import villianess9 from './uploads/villianess9.jpeg'
+import villianess10 from './uploads/villianess10.jpeg'
 class {
     onCreate() {
         this.state = { count:0 };
@@ -7,7 +16,6 @@ class {
         this.state.count++;
     }
 }
-
 style {
     .count {
         color:#09c;
@@ -18,10 +26,168 @@ style {
         padding:0.5em;
     }
 }
-
-<div.count>
-    ${state.count}
+<div.count>${state.count}</div>
+<button.example-button on-click('increment')>Click me!</button>
+<img src=logo.sources["800w"] srcset=logo.srcSet alt=""/>
+<section class="measure p2" id="utilities">
+    <h3>Utilities</h3>
+    <h4 class="muted">Padding</h4>
+    <div class="p0 my1 brdr--light-gray">.p0</div>
+    <div class="p1 my1 brdr--light-gray">.p1</div>
+    <div class="p2 my1 brdr--light-gray">.p2</div>
+    <div class="py1 my1 brdr--light-gray">.py1</div>
+    <div class="py2 my1 brdr--light-gray">.py2</div>
+    <div class="px1 my1 brdr--light-gray">.px1</div>
+    <div class="px2 my1 brdr--light-gray">.px2</div>
+    <h4 class="muted">Margin</h4>
+    <div class="m0 p1 brdr--light-gray">.m0</div>
+    <div class="m1 p1 brdr--light-gray">.m1</div>
+    <div class="m2 p1 brdr--light-gray">.m2</div>
+    <div class="my1 p1 brdr--light-gray">.my1</div>
+    <div class="my2 p1 brdr--light-gray">.my2</div>
+    <div class="mx1 p1 brdr--light-gray">.mx1</div>
+    <div class="mx2 p1 brdr--light-gray">.mx2</div>
+</section>
+<div class="oflow-y--scroll bg--white my2 p2">
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>twitter</th>
+                <th>email</th>
+                <th>website</th>
+                <th>beer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>@4lpine</td>
+                <td>johnotander@gmail.com</td>
+                <td>
+                    <a href="http://johnotander.com" title="John Otander's website.">
+                        johnotander.com
+                    </a>
+                </td>
+                <td>Fresh Squeezed IPA</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ryan</td>
+                <td>@sessynine</td>
+                <td>sessynine@gmail.com</td>
+                <td>
+                    <a href="http://sessynine.com" title="Ryan Shelton's website.">
+                        sessynine.com
+                    </a>
+                </td>
+                <td>Coors Light</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<button.example-button on-click('increment')>
-    Click me!
-</button>
+<section class="measure p2" id="colors">
+    <h3>Colors</h3>
+    <p class="h4">
+        Inspiration is drawn from
+        <a href="http://clrs.cc" title="Colors.css website">colors.css</a>
+        and
+        <a href="http://getbootstrap.com" title="Bootstrap website">bootstrap</a>
+        to provide helper classes
+             and variables.
+    </p>
+    <h4 class="muted" id="background-color">Backgrounds</h4>
+    <p class="h4">
+        There's an assortment of background colors that can be used for flash messages,
+        table headings... anything.
+    </p>
+    <div class="bg--white p2">.bg--white</div>
+    <div class="bg--off-white p2">.bg--off-white</div>
+    <div class="bg--light-gray p2">.bg--light-gray</div>
+    <div class="bg--mid-gray p2 fnt--white">.bg--mid-gray</div>
+    <div class="bg--dark-gray p2 fnt--white">.bg--dark-gray</div>
+    <div class="bg--red p2">.bg--red</div>
+    <div class="bg--orange p2">.bg--orange</div>
+    <div class="bg--blue p2">.bg--blue</div>
+    <div class="bg--green p2">.bg--green</div>
+    <h4 class="muted" id="borders">Borders</h4>
+    <p class="h4">
+        There are a few border classes to take advantage of in order to frame content.
+    </p>
+    <div class="brdr--off-white p1 my1">.brdr--off-white</div>
+    <div class="brdr--light-gray p1 my1">.brdr--light-gray</div>
+    <div class="brdr--mid-gray p1 my1">.brdr--mid-gray</div>
+    <div class="brdr--dark-gray p1 my1">.brdr--dark-gray</div>
+    <h4 class="muted" id="text-color">Text Colors</h4>
+    <p class="h4">You can also modify the text color.</p>
+    <span class="fnt--white bg--light-gray">.fnt--white</span>
+    <span class="fnt--off-white bg--light-gray">.fnt--off-white</span>
+    <br/>
+    <span class="fnt--light-gray">.fnt--light-gray</span>
+    <span class="fnt--mid-gray">.fnt--mid-gray</span>
+    <span class="fnt--dark-gray">.fnt--dark-gray</span>
+    <span class="fnt--red">.fnt--red</span>
+    <span class="fnt--orange">.fnt--orange</span>
+    <span class="fnt--blue">.fnt--blue</span>
+    <span class="fnt--green">.fnt--green</span>
+</section>
+<div class="grd bg--off-white brdr--white p2 small"/>
+<div class="txt--center">
+    <code>&nbsp;.grd > .grd-row > .grd-row-col</code>
+</div>
+<div class="grd-row my1">
+    <div class="grd-row-col-1-6 bg--light-gray py1">
+        <code>&nbsp;.col-1</code>
+    </div>
+    <div class="grd-row-col-5-6 py1 bg--white">
+        <code>&nbsp;.col-5</code>
+    </div>
+</div>
+<div class="grd-row my1">
+    <div class="grd-row-col-2-6 bg--light-gray py1">
+        <code>&nbsp;.col-2</code>
+    </div>
+    <div class="grd-row-col-4-6 py1 bg--white">
+        <code>&nbsp;.col-4</code>
+    </div>
+</div>
+<div class="grd-row my1">
+    <div class="grd-row-col-3-6 bg--light-gray py1">
+        <code>&nbsp;.col-3</code>
+    </div>
+    <div class="grd-row-col-3-6 py1 bg--white">
+        <code>&nbsp;.col-3</code>
+    </div>
+</div>
+<div class="grd-row my1">
+    <div class="grd-row-col-4-6 bg--light-gray py1">
+        <code>&nbsp;.col-4</code>
+    </div>
+    <div class="grd-row-col-2-6 py1 bg--white">
+        <code>&nbsp;.col-2</code>
+    </div>
+</div>
+<div class="grd-row my1">
+    <div class="grd-row-col-5-6 bg--light-gray py1">
+        <code>&nbsp;.col-5</code>
+    </div>
+    <div class="grd-row-col-1-6 py1 bg--white">
+        <code>&nbsp;.col-1</code>
+    </div>
+</div>
+<div class="grd-row my1">
+    <div class="grd-row-col-6 bg--light-gray py1">
+        <code>&nbsp;.col-6</code>
+    </div>
+</div>
+<img src=villianess2.sources["800w"] srcset=villianess2.srcSet alt=""/>
+<img src=villianess3.sources["800w"] srcset=villianess3.srcSet alt=""/>
+<img src=villianess4.sources["800w"] srcset=villianess4.srcSet alt=""/>
+<img src=villianess5.sources["800w"] srcset=villianess5.srcSet alt=""/>
+<img src=villianess6.sources["800w"] srcset=villianess6.srcSet alt=""/>
+<img src=villianess7.sources["800w"] srcset=villianess7.srcSet alt=""/>
+<img src=villianess8.sources["800w"] srcset=villianess8.srcSet alt=""/>
+<img src=villianess9.sources["800w"] srcset=villianess9.srcSet alt=""/>
+<img src=villianess10.sources["800w"] srcset=villianess10.srcSet alt=""/>
