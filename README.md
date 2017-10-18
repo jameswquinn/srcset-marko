@@ -1,1 +1,1 @@
-# srcset-marko-sass-purifycss
+# srcset-marko-sass-purifycss-favicon
