@@ -1,7 +1,6 @@
-const css = require('./Furtive/all.scss');
-var view = require('./template.marko'); // Import `./view.marko`
-var resultPromise = view.render({});
+var css = require('./Furtive/all.scss');
+import lazysizes from 'lazysizes';
 
-resultPromise.then((result) => {
-    result.appendTo(document.body);
-});
+var view = require('./template.marko'); // Import `./view.marko`
+var result = view.renderSync({});
+result.appendTo(document.body);

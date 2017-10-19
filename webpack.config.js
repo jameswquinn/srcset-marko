@@ -20,11 +20,12 @@ module.exports = {
             test: /\.marko$/,
             loader: 'marko-loader'
         }, {
-            test: /\.scss$/,
+            test: /\.(css|scss|sass)$/,
+            // loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
             loader: ExtractTextPlugin.extract({
-                fallback: "style-loader",
-                use: "css-loader!sass-loader"
-            })
+                fallback: 'style-loader',
+                use: 'css-loader!postcss-loader!sass-loader'
+            }),
         }, {
             test: /\.(jpe?g|png|gif|svg)$/,
             use: [{
