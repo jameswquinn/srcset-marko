@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "webpack config using  srcset-loader",
   "main": "webpack.config.js",
+  "browserslist": [
+    "> 1%",
+    "ie > 9"
+  ],
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
