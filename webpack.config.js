@@ -39,7 +39,7 @@ module.exports = {
                     hash: 'sha512',
                     digest: 'hex',
                     outputPath: './images/',
-                    name: '[name].[hash:5].[ext]',
+                    name: '[name].[hash:7].[ext]',
                 },
             }, {
                 loader: 'image-webpack-loader',
@@ -158,11 +158,11 @@ module.exports = {
             // Your source logo
             logo: './src/logo.png',
             // The prefix for all image files (might be a folder or a name)
-            prefix: 'icons-[hash]/',
+            prefix: 'icons/',
             // Emit all stats of the generated icons
             emitStats: false,
             // The name of the json containing all favicon information
-            statsFilename: 'iconstats-[hash].json',
+            statsFilename: 'iconstats.json',
             // Generate a cache file with control hashes and
             // don't rebuild the favicons until those hashes change
             persistentCache: true,
