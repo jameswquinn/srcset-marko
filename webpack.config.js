@@ -39,7 +39,7 @@ module.exports = {
                     hash: 'sha512',
                     digest: 'hex',
                     outputPath: './images/',
-                    name: '[name].[hash].[ext]',
+                    name: '[name].[hash:5].[ext]',
                 },
             }, {
                 loader: 'image-webpack-loader',
