@@ -90,53 +90,16 @@ module.exports = {
             // Optional
             appMountId: 'myApp',
             //appMountIds: ['about', 'contact'], //e.g. multiple templates
-            meta: [{
-                name: 'identifier-url',
-                content: 'http://www.webestools.com/'
-            }, {
-                name: 'title',
-                content: 'Webestools'
-            }, {
-                name: 'description',
-                content: 'A better default template for html-webpack-plugin.'
-            }, {
-                name: 'abstract',
-                content: 'Tools for webmasters'
-            }, {
-                name: 'keywords',
-                content: 'tools, webmasters, meta, generator'
-            }, {
-                name: 'author',
-                content: 'A N Other'
-            }, {
-                name: 'revisit-after',
-                content: '15'
-            }, {
-                name: 'language',
-                content: 'EN'
-            }, {
-                name: 'copyright',
-                content: '© 2017 Webestool'
-            }, {
-                name: 'robots',
-                content: 'Index, follow'
-            }, ],
-            og: [{
-                property: 'title:og',
-                content: 'Webestools'
-            }, {
-                property: 'og:site_name',
-                content: 'David Walsh Blog'
-            }, {
-                property: 'image:og',
-                content: './src/logo.png'
-            }, {
-                property: 'description:og',
-                content: 'A better default template for html-webpack-plugin.'
-            }, ],
+            
             mobile: true,
             lang: 'en',
             title: 'Project Demo',
+            description: 'A better default template for html-webpack-plugin.',
+            Keywords: 'Awwwards are the Website Awards that recognize and promote the talent and effort of the best developers, designers and web agencies in the world.',
+            url: 'localhost:8080',
+            site: 'myApp.com',
+            creator: '© J Quinn 2017',
+            image: 'https://assets.awwwards.com/awards/sites_of_the_day/2016/12/awwwards-sotd-monochrome.jpg',
             // minify: {
             //     collapseWhitespace: true
             // },

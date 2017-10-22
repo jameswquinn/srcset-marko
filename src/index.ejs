@@ -1,20 +1,32 @@
-<% var item, key %><% htmlWebpackPlugin.options.lang = htmlWebpackPlugin.options.lang || "en" %><% htmlWebpackPlugin.options.meta = htmlWebpackPlugin.options.meta || [] %>
+<% var item, key %><% htmlWebpackPlugin.options.lang = htmlWebpackPlugin.options.lang || "en" %>
 <!DOCTYPE html>
 <html lang="<%= htmlWebpackPlugin.options.lang %>" <% if (htmlWebpackPlugin.files.manifest) { %> manifest="<%= htmlWebpackPlugin.files.manifest %>"<% } %>>
   <head>
-    <meta charset="utf-8">
-    <meta content="ie=edge" http-equiv="x-ua-compatible"><% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %><% for (item of htmlWebpackPlugin.options.meta) { %>
-    <meta<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %>><% } %><% } %>
-    <% if (Array.isArray(htmlWebpackPlugin.options.og)) { %><% for (item of htmlWebpackPlugin.options.og) { %>
-    <meta<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %>><% } %><% } %>
-    <% if (htmlWebpackPlugin.files.favicon) { %>
-    <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon">
-    <% } %>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-cross-origin" />
     <% if (htmlWebpackPlugin.options.mobile) { %>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <% } %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta name="Keywords" content="<%= htmlWebpackPlugin.options.Keywords %>">
+    <meta name="creator" content="<%= htmlWebpackPlugin.options.creator %>">
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= htmlWebpackPlugin.options.url %>" />
+    <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta property="og:image" content="<%= htmlWebpackPlugin.options.image %>" />
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:site" content="<%= htmlWebpackPlugin.options.site %>">
+    <meta name="twitter:creator" content="<%= htmlWebpackPlugin.options.creator %>">
+    <meta name="twitter:url" content="<%= htmlWebpackPlugin.options.url %>">
+    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta name="twitter:description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta name="twitter:image" content="<%= htmlWebpackPlugin.options.image %>">
+    <% if (htmlWebpackPlugin.files.favicon) { %>
+    <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon">
+    <% } %>
     <title><%= htmlWebpackPlugin.options.title %></title>
-
   </head>
   <body>
   <style>
