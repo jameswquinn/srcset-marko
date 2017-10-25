@@ -27,7 +27,7 @@ module.exports = {
                 use: 'css-loader!postcss-loader!sass-loader'
             }),
         }, {
-            test: /\.(jpe?g|png|gif|svg)$/,
+            test: /\.(jpe?g|png|webp|gif|svg)$/,
             use: [{
                 loader: 'srcset-loader',
                 options: {
@@ -88,9 +88,9 @@ module.exports = {
             },
 
             // Optional
-            appMountId: 'myApp',
+            appMountId: 'index',
             //appMountIds: ['about', 'contact'], //e.g. multiple templates
-            
+
             mobile: true,
             lang: 'en',
             title: 'Project Demo',
